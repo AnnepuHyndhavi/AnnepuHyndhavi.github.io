@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Annepu Hyndhavi | Data Scientist Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+      background: linear-gradient(to bottom, #240000, #000000); /* Updated gradient to #240000 and black */
+    }
+    .glass {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 1s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease;
+    }
+    .accordion-header:hover {
+      cursor: pointer;
+      color: #38bdf8;
+    }
+
+    /* New styles for headline animation */
+    .fade-in-up-headline {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .fade-in-up-headline.visible-headline {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Golden frame for the first section */
+    .hero-section-frame {
+      position: relative;
+      padding: 20px; /* Adjust padding to control frame thickness */
+    }
+    .hero-section-frame::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border: 5px solid; /* Adjust thickness of the border */
+      border-image: linear-gradient(to bottom right, #FFD700, #DAA520, #B8860B) 1; /* Golden gradient */
+      border-image-slice: 1;
+      pointer-events: none; /* Allows clicks to pass through */
+      z-index: 10; /* Ensure it's above the content but below the text */
+    }
+
+    /* Golden text for the name and headlines */
+    .golden-text {
+      background: linear-gradient(to right, #FFD700, #DAA520, #B8860B);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: #FFD700; /* Fallback for browsers that don't support text fill color */
+    }
+  </style>
+</head>
+<body class="text-white overflow-x-hidden">
+  <section class="relative h-screen flex flex-col justify-center items-center text-center bg-cover bg-center bg-no-repeat hero-section-frame">
+    <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight mb-4">
+      <span class="golden-text">ANNEPU HYNDHAVI</span>
+    </h1>
+    <p class="text-xl font-light text-gray-200">AI & Data Science Professional</p>
+    <button onclick="document.getElementById('section-summary').scrollIntoView({behavior: 'smooth'})" class="mt-10 px-6 py-3 bg-white text-black font-semibold rounded-lg shadow hover:scale-105 transition">Explore Portfolio</button>
+  </section>
+
+  <section id="section-summary" class="min-h-screen px-6 py-20 max-w-4xl mx-auto fade-in">
+    <h2 class="text-4xl font-bold mb-6 fade-in-up-headline golden-text">🌟 Professional Summary</h2>
+    <div class="glass p-6 rounded-2xl shadow-lg">
+      <p class="text-gray-300">Results-driven AI and Data Science professional with hands-on experience in developing AI/ML models and data-driven solutions using Python, TensorFlow, and NLP. Adept at building scalable applications and enhancing business processes through deep learning and data visualization techniques. Passionate about delivering actionable insights and optimizing AI-driven solutions for real-world applications. Proven ability to collaborate with cross-functional teams and deliver impactful AI solutions.</p>
+    </div>
+  </section>
+
+  <section class="min-h-screen px-6 py-20 max-w-4xl mx-auto fade-in">
+    <h2 class="text-4xl font-bold mb-6 fade-in-up-headline golden-text">💼 Professional Experience</h2>
+    <div class="glass p-6 rounded-2xl shadow-lg">
+      <div>
+        <h3 class="accordion-header text-xl font-semibold mb-2" onclick="toggleAccordion('alpha-ai-experience')">▶ Alpha AI – Data Scientist Intern (June 2021 – July 2021)</h3>
+        <div id="alpha-ai-experience" class="accordion-content text-gray-300">
+          <ul class="list-disc ml-5 text-gray-300">
+            <li>Led the development of an interactive web application, reducing data visualization time by 30% through optimized processing workflows.</li>
+            <li>Collaborated with cross-functional teams to enhance visualization features, leading to a 20% increase in user engagement.</li>
+            <li>Designed a user-friendly interface ensuring seamless data entry and robust backend processing for data validation and quality assurance.</li>
+            <li>Implemented diverse visualization techniques, including bar graphs, pie charts, and density plots using libraries such as Seaborn, Matplotlib, Plotly, and Pandas.</li>
+            <li>Collaborated with the development team to integrate visualization features.</li>
+            <li>Optimized data processing workflows to enhance visualization accuracy and performance across multiple datasets.</li>
+            <li>Conducted performance testing to ensure visualization load times were optimized, improving application responsiveness by analyzing data rendering efficiency.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="min-h-screen px-6 py-20 max-w-4xl mx-auto fade-in">
+    <h2 class="text-4xl font-bold mb-6 fade-in-up-headline golden-text">💡 Skills</h2>
+    <div class="glass p-6 rounded-2xl shadow-lg">
+      <ul class="list-disc ml-5 text-gray-300">
+        <li><strong>Languages:</strong> Python, SQL, HTML, CSS, JavaScript (Basic)</li>
+        <li><strong>Frameworks:</strong> TensorFlow, Scikit-learn, Weka</li>
+        <li><strong>Visualization:</strong> Matplotlib, Seaborn, Plotly, Google Colab</li>
+        <li><strong>Specialized:</strong> NLP, Time Series Analysis, Deep Learning (CNN, RNN), Data Wrangling</li>
+        <li><strong>Tools:</strong> Git, MS Office, Adobe</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="min-h-screen px-6 py-20 max-w-4xl mx-auto fade-in">
+    <h2 class="text-4xl font-bold mb-6 fade-in-up-headline golden-text">🎓 Academic Projects</h2>
+    <div class="glass p-6 rounded-2xl shadow-lg">
+      <div>
+        <h3 class="accordion-header text-xl font-semibold mb-2" onclick="toggleAccordion('gan')">▶ Generative AI-Powered Plagiarism Detection: Advancing TextGuard with GANShield (Aug 2023 – Dec 2023)</h3>
+        <div id="gan" class="accordion-content text-gray-300">
+          <p>Developed GANShield, an advanced plagiarism detection system by integrating Generative Adversarial Networks (GANs) with BERT (Bidirectional Encoder Representations from Transformers) to enhance text similarity analysis. Improved detection accuracy by leveraging deep learning techniques to identify paraphrased and obfuscated text effectively. Conducted extensive training on large-scale text datasets, fine-tuning the model to reduce false positives by 15%. Designed and implemented efficient data preprocessing workflows for text cleaning and embeddings, ensuring optimal model performance. Implemented adversarial training strategies to enhance model robustness against sophisticated paraphrasing techniques. Utilized transformer-based encoders to improve contextual understanding and semantic matching in text similarity analysis.</p>
+        </div>
+      </div>
+      <div>
+        <h3 class="accordion-header text-xl font-semibold mb-2 mt-6" onclick="toggleAccordion('pneumonia')">▶ Pneumonia Detection Using CNN (U-Net) (May 2023 – July 2023)</h3>
+        <div id="pneumonia" class="accordion-content text-gray-300">
+          <p>Designed and implemented Convolutional Neural Networks (U-Net architecture) to accurately detect pneumonia in chest X-ray images. Pre-processed medical image datasets and applied data augmentation techniques to enhance model robustness and generalization. Evaluated model performance using key metrics, including accuracy, precision, recall, and F1-score, to ensure diagnostic reliability. Contributed to the development of automated diagnostic tools, facilitating faster patient care and improved healthcare outcomes.</p>
+        </div>
+      </div>
+      <div>
+        <h3 class="accordion-header text-xl font-semibold mb-2 mt-6" onclick="toggleAccordion('translation')">▶ Language Translation Using Transformers (Jan 2023 – May 2023)</h3>
+        <div id="translation" class="accordion-content text-gray-300">
+          <p>Built a language translation model using Transformer architecture, enabling accurate text translation between multiple languages. Trained the model on a large multilingual corpus, experimenting with hyperparameters and optimization techniques to improve translation accuracy. Implemented preprocessing techniques suchs as tokenization and embeddings to enhance model efficiency and performance. Achieved significant improvements in translation accuracy through iterative model tuning and evaluation. Integrated attention mechanisms to improve the model's ability to capture long-range dependencies and contextual relationships, resulting in enhanced translation fluency and coherence.</p>
+        </div>
+      </div>
+      <div>
+        <h3 class="accordion-header text-xl font-semibold mb-2 mt-6" onclick="toggleAccordion('traffic')">▶ Traffic Signal and Object Prediction Using TensorFlow (Nov 2022 – Dec 2022)</h3>
+        <div id="traffic" class="accordion-content text-gray-300">
+          <p>Developed an image recognition system using TensorFlow and deep learning models to accurately predict traffic signal lights and detect objects. Enhanced object detection accuracy by applying data augmentation techniques to preprocess and optimize image datasets. Evaluated model performance using industry-standard metrics such as mean average precision (mAP) to ensure reliability and effectiveness. Integrated real-time inference capabilities to enable quick & accurate detection of light.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="min-h-screen px-6 py-20 max-w-4xl mx-auto fade-in">
+    <h2 class="text-4xl font-bold mb-6 fade-in-up-headline golden-text">🏆 Major Projects</h2>
+    <div class="glass p-6 rounded-2xl shadow-lg">
+      <div>
+        <h3 class="accordion-header text-xl font-semibold mb-2" onclick="toggleAccordion('handwriting-recognition')">▶ Handwriting Recognition Using CNN (Aug 2021 – Dec 2021)</h3>
+        <div id="handwriting-recognition" class="accordion-content text-gray-300">
+          <p>Developed a handwritten digit recognition system using Convolutional Neural Networks (CNNs). Processed and analyzed image datasets to enhance model accuracy and recognition capabilities. Achieved high accuracy by optimizing the model with dropout and batch normalization techniques.</p>
+        </div>
+      </div>
+      <div>
+        <h3 class="accordion-header text-xl font-semibold mb-2 mt-6" onclick="toggleAccordion('flappy-bird-ai')">▶ AI Game Learning Using Genetic Algorithms (Jan 2021 – May 2021)</h3>
+        <div id="flappy-bird-ai" class="accordion-content text-gray-300">
+          <p>Implemented a genetic algorithm-based AI model to train a neural network for playing the game Flappy Bird. Designed fitness functions to evolve the AI model through generations, improving gameplay performance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="min-h-screen px-6 py-20 max-w-4xl mx-auto fade-in">
+    <h2 class="text-4xl font-bold mb-6 fade-in-up-headline golden-text">🎓 Education</h2>
+    <div class="glass p-6 rounded-2xl shadow-lg">
+      <p class="text-gray-300 mb-2 font-semibold">KENT STATE UNIVERSITY, Kent, OH</p>
+      <p class="text-gray-300 mb-2">MS in Artificial Intelligence</p>
+      <p class="text-gray-300 text-sm mb-4">Courses: Artificial Intelligence, Advanced Artificial Intelligence, Machine Learning, Algorithmic robotics, Advanced database, and system design, computational health informatics, Practicum in AI.</p>
+      <p class="text-gray-300 mb-2 font-semibold">UNIVERSITY OF PETROLEUM AND ENERGY STUDIES, Dehradun, India</p>
+      <p class="text-gray-300 mb-2">B.Tech in CSE (AI & ML) (Jun 2018 - Aug 2022)</p>
+      <p class="text-gray-300 text-sm">Courses: Machine Learning, Data Mining and Prediction, Neural Networks, Operating Systems, Deep Learning, Natural Language Processing</p>
+    </div>
+  </section>
+
+  <section class="min-h-screen px-6 py-20 max-w-4xl mx-auto fade-in">
+    <h2 class="text-4xl font-bold mb-6 fade-in-up-headline golden-text">📄 Certificates</h2>
+    <div class="glass p-6 rounded-2xl shadow-lg">
+      <ul class="list-disc ml-5 text-gray-300">
+        <li>Python for Data Science, AI & Development – IBM</li>
+        <li>Getting and Cleaning Data – Johns Hopkins</li>
+        <li>Introduction to AI – IBM</li>
+      </ul>
+    </div>
+  </section>
+
+  <a href="resume.pdf" target="_blank" class="fixed bottom-6 right-6 bg-white text-black p-4 rounded-full shadow-lg hover:scale-110 transition" title="Download Resume">
+    📄
+  </a>
+
+  <script>
+    function toggleAccordion(id) {
+      const el = document.getElementById(id);
+      if (el.style.maxHeight) {
+        el.style.maxHeight = null;
+      } else {
+        // Close all other open accordion contents
+        document.querySelectorAll('.accordion-content').forEach(c => c.style.maxHeight = null);
+        el.style.maxHeight = el.scrollHeight + 'px';
+      }
+    }
+
+    // Intersection Observer for section fade-in
+    document.querySelectorAll('.fade-in').forEach(sec => {
+      new IntersectionObserver(entries => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.classList.add('visible');
+            // Animate headlines after a short delay for better effect
+            setTimeout(() => {
+              e.target.querySelectorAll('.fade-in-up-headline').forEach(headline => {
+                headline.classList.add('visible-headline');
+              });
+            }, 300); // Adjust delay as needed
+          } else {
+            e.target.classList.remove('visible');
+            e.target.querySelectorAll('.fade-in-up-headline').forEach(headline => {
+              headline.classList.remove('visible-headline');
+            });
+          }
+        });
+      }, { threshold: 0.2 }).observe(sec);
+    });
+  </script>
+</body>
+</html>
